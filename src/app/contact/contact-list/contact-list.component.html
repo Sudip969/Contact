@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-10" style="background-image:linear-gradient(red,orange)">
+        <ul class="list-group">
+            <a href="#" class="list-group-item" *ngFor="let cont of contacts" (click)="onSelected(cont)">
+                {{cont.name}} : {{cont.phoneNo}}
+            </a>
+        </ul>
+    </div>
+</div>

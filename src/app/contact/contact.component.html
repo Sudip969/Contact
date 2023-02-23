@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <app-contact-list></app-contact-list>
+        </div>
+        <div class="col-md-7">
+            <app-contact-details (selectContact)="selectedContact($event)"
+            *ngIf="selectContact; else elsePart"
+            [contact]="selectContact"></app-contact-details>
+            <ng-template #elsePart>
+                <p>Select A Contact</p>
+            </ng-template>
+        </div>
+    </div>
+</div>
