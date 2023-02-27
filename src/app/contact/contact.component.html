@@ -1,15 +1,14 @@
+<body style="background-image:linear-gradient(green,white)">
 <div class="container">
     <div class="row">
         <div class="col-md-5">
-            <app-contact-list></app-contact-list>
+            <app-contact-list *ngFor="let contact of contacts;let i=index"
+            [contact]="contact"
+            [index]="i"></app-contact-list>
         </div>
         <div class="col-md-7">
-            <app-contact-details (selectContact)="selectedContact($event)"
-            *ngIf="selectContact; else elsePart"
-            [contact]="selectContact"></app-contact-details>
-            <ng-template #elsePart>
-                <p>Select A Contact</p>
-            </ng-template>
+        <router-outlet></router-outlet>
         </div>
     </div>
 </div>
+</body>

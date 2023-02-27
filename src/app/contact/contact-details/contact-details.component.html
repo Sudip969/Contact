@@ -1,1 +1,18 @@
-<p>contact-details works! {{contact.name}} </p>
+<div class="row">
+    <div class="col-10">
+        <p class="display-5">{{contact.name}} : {{contact.phoneNo}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="btn-group">
+            <button type="button" class="btn bg-secondary dropdown-toggle" data-bs-toggle="dropdown">Edit</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" style="cursor: pointer;"(click)="onEdit()">Edit name</a></li>
+                <li><a class="dropdown-item" style="cursor: pointer;"(click)="onEdit()">Edit number</a></li>
+                <li><a class="dropdown-item" style="cursor: pointer;"(click)="onDelete()">Delete Number</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
